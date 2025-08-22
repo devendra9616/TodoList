@@ -10,11 +10,15 @@ const PORT = process.env.PORT || 4000;
 // Allow frontend origin
 app.use(
   cors({
-    origin: "http://localhost:5173", // Your React app URL
+    origin: [
+      "http://localhost:5173", // Local development
+      "https://your-frontend.vercel.app" // Vercel domain
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 
 // Middleware to parse JSON
 app.use(express.json());
