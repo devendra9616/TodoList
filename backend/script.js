@@ -12,7 +12,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173", // Local development
-      "https://your-frontend.vercel.app" // Vercel domain
+      "https://todo-list-alpha-fawn.vercel.app" // Vercel domain
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
